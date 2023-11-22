@@ -27,7 +27,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/components/Layouts/*.tsx",
+    "src/components/Layouts/*.tsx", "src/components/Header/navbar.tsx",
   ],
   "exclude": [
     "node_modules"

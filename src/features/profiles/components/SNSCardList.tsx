@@ -5,7 +5,7 @@ export default function SNSCardList({ snsCardIndexList }: { snsCardIndexList: SN
         <div className="max-w-md mx-auto grid grid-cols-4 md:max-w-2xl gap-3 ">
             {snsCardIndexList.map((snsCardIndex: SNSCardIndex, index: number) => {
                 return (
-                    <SNSCard key={index} snsCardIndex={snsCardIndex} />
+                    <SNSCard key={index} id={index} snsCardIndex={snsCardIndex} />
                 );
             })}
         </div>

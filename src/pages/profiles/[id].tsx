@@ -4,7 +4,6 @@ import SNSCardList from "@/features/profiles/components/SNSCardList";
 import fetchUserSNSCardIndex from "@/features/profiles/apis/fetchUser";
 import ShowingSelfIntroduction from "@/features/profiles/components/Introduction";
 import ShowingProfileIcon from "@/features/profiles/components/ProfileIcon";
-import HomeNavbar from "@/components/Header/navbar";
 
 //dynamicParams = falseにすることで、動的ルーティングされたアドレス
 //以外にアクセスすると404ページにリダイレクトする。
@@ -53,35 +52,30 @@ export default function Page({ allSNSCardIndex }: { allSNSCardIndex: SNSCardInde
             <Head>
                 <title>test</title>
             </Head>
-            <body>
-                <header>
-                    <HomeNavbar />
-                </header>
-                <main className='min-h-screen p-20 space-y-8'>
-                    <ShowingProfileIcon iconPath="/pokemon.jpeg" userName="ランマル" userID="ranmaru" />
-                    <ShowingSelfIntroduction introduction={introductionSample} />
-                    <SNSCardList snsCardIndexList={allSNSCardIndex} />
+            <main className='min-h-screen p-20 space-y-8'>
+                <ShowingProfileIcon iconPath="/pokemon.jpeg" userName="ランマル" userID="ranmaru" />
+                <ShowingSelfIntroduction introduction={introductionSample} />
+                <SNSCardList snsCardIndexList={allSNSCardIndex} />
 
-                    <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
-                        <div className="md:flex">
-                            <div className="md:shrink-0">
-                                <Image
-                                    width={100}
-                                    height={24}
-                                    className="h-48 w-full object-cover md:h-full md:w-48"
-                                    src="/pokemon.jpeg"
-                                    alt="Modern building architecture"
-                                />
-                            </div>
-                            <div className="p-8">
-                                <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Company retreats</div>
-                                <a href="#" className="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Incredible accommodation for your team</a>
-                                <p className="mt-2 text-slate-500">Looking to take your team away on a retreat to enjoy awesome food and take in some sunshine? We have a list of places to do just that.</p>
-                            </div>
+                <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+                    <div className="md:flex">
+                        <div className="md:shrink-0">
+                            <Image
+                                width={100}
+                                height={24}
+                                className="h-48 w-full object-cover md:h-full md:w-48"
+                                src="/pokemon.jpeg"
+                                alt="Modern building architecture"
+                            />
+                        </div>
+                        <div className="p-8">
+                            <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Company retreats</div>
+                            <a href="#" className="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Incredible accommodation for your team</a>
+                            <p className="mt-2 text-slate-500">Looking to take your team away on a retreat to enjoy awesome food and take in some sunshine? We have a list of places to do just that.</p>
                         </div>
                     </div>
-                </main>
-            </body>
+                </div>
+            </main>
         </>
     )
 }

@@ -1,6 +1,6 @@
-import Image from "next/image"
+import Image from "next/image";
 
-export default function SNSCard({ key, snsCardIndex }: { key: number, snsCardIndex: SNSCardIndex }) {
+export default function SNSCard({ id, snsCardIndex }: { id: number, snsCardIndex: SNSCardIndex }) {
     return (
         <div className="flex flex-col justify-center items-center bg-slate-50 rounded-xl shadow-md">
             <Image
@@ -16,6 +16,5 @@ export default function SNSCard({ key, snsCardIndex }: { key: number, snsCardInd
                 <a href="#" className="block mt-1 text-lg leading-tight font-medium text-black hover:underline">{snsCardIndex.description}</a>
             </div>
         </div>
-
     )
 }
